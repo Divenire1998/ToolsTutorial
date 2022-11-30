@@ -1,0 +1,3 @@
+<launch>
+   <rosparam command="dump" file="$(find launch01_basic)/launch/paramsOut.yaml"/>
+</launch>

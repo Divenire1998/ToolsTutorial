@@ -1,0 +1,19 @@
+%导言区
+\documentclass{ctexart}%ctexbook，ctexrep
+\usepackage{ctex}
+%更多的宏包及格式，建议直接参考清华或者IEEE提供的模板
+%\usepackage[round]{natbib}
+\bibliographystyle{plain}%plain unsrt
+%正文区(文稿区)
+\begin{document}
+	
+	这是一个参考文献的引用：\cite{triggs_bundle_2011}
+	
+	
+	这是另一个参考文献的引用\textsuperscript{\cite{kelly_visual-inertial_2011}}
+	
+	%显示没有使用的参考文献
+	\nocite{*}
+	
+	\bibliography{paper}
+\end{document}

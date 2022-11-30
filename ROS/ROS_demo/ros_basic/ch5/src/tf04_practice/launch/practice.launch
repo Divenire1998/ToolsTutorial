@@ -1,0 +1,13 @@
+<launch>
+    <!-- 1. 启动乌龟GUI节点和键盘控制节点 -->
+    <node pkg="turtlesim" type="turtlesim_node" name="turtle1" output="screen" />
+    <node pkg="turtlesim" type="turtle_teleop_key" name="key_control" output="screen"/>
+    <!-- 2. 启动乌龟生成节点 -->
+    <node pkg="tf04_practice" type="tf04_generate_node" name="turtle2" output="screen"/>
+    <!-- 3. 启动两个坐标发布节点 -->
+    <node pkg="tf04_practice" type="tf04_pub_node" name="caster1" args="turtle1" output="screen"/>
+    <node pkg="tf04_practice" type="tf04_pub_node" name="caster2" args="turtle2" output="screen"/>
+    <!-- 4. 订阅两个乌龟的坐标发布节点，并发布控制信息 -->
+    <node pkg="tf04_practice" type="tf04_sub_node" name="control_2" output="screen"/>
+    
+</launch>

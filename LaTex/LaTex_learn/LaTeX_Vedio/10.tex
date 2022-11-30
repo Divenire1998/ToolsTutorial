@@ -1,0 +1,112 @@
+%导言区
+\documentclass{article}%ctexbook
+\usepackage{ctex}
+\usepackage{amsmath}%有*的内容需要amsmath宏包
+%正文区(文稿区)
+\begin{document}
+	\section{简介}
+	\LaTeX{}将排版内容分为文本模式和数学模式。文本模式用于普通文本排版，数学模式用于数学公式排版。
+	\section{行内公式}
+	\subsection{美元符号}
+	交换律是$a+b=b+a$, 如$1+2=2+1=3$。
+	\subsection{小括号}
+	交换律是\(a+b=b+a\),如 \(1+2=2+1=3\)。
+	\subsection{math环境}
+	交换律是\begin{math}a+b=b+a\end{math},如
+	\begin{math}1+2=2+1=3 \end{math}
+	\subsection{小括号}
+	\subsection{math环境}
+	\section{上下标}
+	\subsection{上标}
+	$3x^{20} - x + 2 = 0$
+	$3x^{3x^{20} - x + 2} - x + 2 = 0$
+	\subsection{下标}
+	$a_ 0, a_1，a_ 2$
+	$a_ 0，a_1, a_2,..., a_{3x^{20} - x + 2}$
+	\section{希腊字母}
+	$\alpha$
+	$\beta$
+	$\gamma$
+	$\epsilon$
+	$\pi$
+	$\omega$
+	
+	$\Gamma$
+	$\Delta$
+	$\Theta$
+	$\Pi$
+	$\Omega$
+	
+	$\alpha^3 + \beta^2 + \gamma = 0$ .
+	\section{数学函数}
+	$\log$
+	$\sin$
+	$\cos$
+	$\arcsin$
+	$\arccos$
+	$\ln$
+	
+	$\sin^2 X + \cos^2 x = 1$
+	$y =\arcsin x$
+	$y = \sin^{-1} x$
+	$y=\log_2 x$
+	$y = \ln x$
+	
+	%sqrt用于排版根式
+	$\sqrt{2}$
+	$\sqrt{x^2 + y^2}$
+	$\sqrt{2 + \sqrt{2}}$
+	$\sqrt[4]{x}$
+	
+	\section{分式}
+	大约是原体积的$3/4$。
+	大约是原体积的$\frac{3}{4}$
+	
+	$\frac{x}{x^2 + X+ 1}$
+	$\frac{\sqrt{x-1}}{\sqrt{x+1}}$
+	$\frac{1}{1 + \frac{1}{x}}$
+	$\sqrt{\frac{x}{x^2 + x + 1}}$
+	
+	\section{行间公式}
+	\subsection{美元符号}
+	交换律是
+	$$a+b=b+a$$
+	如
+	$$1+2=2+1=3$$
+	\subsection{中括号}
+	交换律是
+	\[a+b=b+a\]
+	如
+	\[1+2=2+1=3\]
+	
+	\subsection{displaymath环境}
+	交换律是
+	\begin{displaymath}
+		a+b=b+a ,
+	\end{displaymath},
+	如
+	\begin{displaymath}
+		1+2=2+1=3.
+	\end{displaymath}
+
+	\subsection{自动编号公式equation环境}
+	交换律见式\ref{eq: commutative}%处处引用
+	\begin{equation}
+		a+b=b+a \label{eq: commutative}%利用label命令添加标签
+	\end{equation}
+
+	%此时显示的是小节编号
+	\subsection{不编号公式equation*环境}
+	交换律见\ref{eq: commutative2}:
+%	带*号的equation为不编号的
+	\begin{equation*}
+		a+b=b+a \label{eq: commutative2}
+	\end{equation*}
+	
+	公式的编号与交叉引用也是自动实现的，大家在排版中，要习惯于采用自动化的方式处理诸如图、表、公式的编号与交叉引用。再如公式\ref{eq:pol}:
+	\begin{equation}
+		x^5 - 7x^3 + 4x = 0 \label{eq:pol}
+	\end{equation}
+	
+	
+\end{document}

@@ -1,0 +1,10 @@
+<launch>
+
+    <!-- pkg包名：helloworld
+         type节点类型：与之相同名称的可执行文件
+         name节点名称：在 ROS 网络拓扑中节点的名称
+         output 日志发送目标，可以设置为 log 日志文件，或 screen 屏幕,默认是 log
+         -->
+    <node pkg="helloworld" type="hello_cpp_node" name="hello_cpp_node" output="screen"/>
+    
+</launch>

@@ -1,0 +1,25 @@
+bg_B: 255
+bg_G: 50
+bg_R: 100
+hello:
+  my_turtle:
+    background_b: 255
+    background_g: 86
+    background_r: 69
+    bg_B: 255
+    bg_G: 50
+    bg_R: 100
+    param_B: 100.9
+param_A: 100
+rosdistro: 'noetic
+
+  '
+roslaunch:
+  uris:
+    host_divenire_tm1801__42169: http://divenire-TM1801:42169/
+    host_divenire_tm1801__42697: http://divenire-TM1801:42697/
+    host_divenire_tm1801__44471: http://divenire-TM1801:44471/
+rosversion: '1.15.11
+
+  '
+run_id: e12a1eea-f59e-11eb-aa30-79a5de38fc54

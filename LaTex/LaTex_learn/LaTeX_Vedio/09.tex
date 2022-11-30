@@ -1,0 +1,68 @@
+%导言区
+\documentclass{ctexart}%ctexbook，ctexrep
+
+%\usepackage{ctex}
+\usepackage{graphicx}
+\graphicspath{{figures/}} %图片在当前目录下的figures目录
+%标题控制(caption、bicaption等宏包)
+%并排与子图表(subcaption、 subfig、 floatrow等宏刨)
+%绕排(picinpar、 wrapfig等宏包)
+
+
+%=======浮动体============
+%实现灵活分页(避免无法分割的内容产生的页面留白)
+%给图表添加标题
+%交叉引用
+
+%=======figure环境(table环境与之类似)============
+%\begin{figure}[<允许位置>]
+%<任意内容>
+%\end{figure}
+% <允许位置>参数(默认tbp)
+% h，此处(here)-代码所在的上下文位置
+% t，页顶(top)-代码所在页面或之后页面的顶部
+% b，页底(Buttom)-代码所在页面或之后页面的底部
+% p，独立一页(page)-浮动页面
+
+%正义区(文稿区)
+\begin{document}
+	%利用\ref进行标签的引用，进而达到交叉引用。
+	\LaTeX{}中\TeX 系统的吉祥物---小狮子见图\ref{fig-lion}。
+	
+	%指定参数指定浮动体的排版位置
+	\begin{figure} [htbp]
+		\centering
+		\includegraphics [scale=0.1]{lion}
+		%利用fig设置标签及编号
+		\caption{\TeX 系统的吉祥物---小狮子}\label{fig-lion} 
+	\end{figure}
+	
+	遥望太白，看积雪皑皑，别有一番风景(图\ref{fig-mountain})。.
+	\begin{figure}[htbp]%允许各个位置
+		\centering
+		\includegraphics [scale=0.1]{mountain}
+		%利用fig设置标签及编号
+		\caption{太白山}\label{fig-mountain}
+	\end{figure}
+	
+	
+	在\LaTeX{}中的表格:
+	当然，在\LaTeX{}中也如以使用表\ref {tab-score}所示的表格。%此处对表格进行了引用。
+	\begin{table}[h]
+		\centering
+		\caption{考试成绩单} \label{tab-score}
+		
+		\begin{tabular}{|l|c|c|c|r|}
+			\hline
+			姓名 & 语文 & 数学 & 外语 & 备注 \\
+			\hline
+			张三 & 87 & 100 & 93 & 优秀 \\
+			\hline
+			李四 & 75 & 64 & 52 & 补者另行通知 \\
+			\hline
+			王二 & 80 & 82 & 78 & \\
+			\hline
+		\end{tabular}
+	\end{table}
+\end{document}
+

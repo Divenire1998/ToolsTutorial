@@ -1,0 +1,16 @@
+<launch>
+    <!-- Send a static GPS fix to every new subscriber. Edit latitude and longitude in launch/demo.gps to use your own position. -->
+    <!-- 开启一个新的节点名叫fake_gps_fix 然后把/launch/demo.gps的信息包装成sensor_msgs/NavSatFix在话题/gps/fix中发布出去 -->
+    <node pkg="rostopic" type="rostopic" name="fake_gps_fix" args="pub /gps/fix sensor_msgs/NavSatFix --latch --file=$(find rviz_satellite)/launch/demo.gps" />
+
+    <!-- Start rviz with a pre-configured AerialMap instance. It will use the fake GPS fix from above. -->
+    <!-- 打开配置好的rviz -->
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find rviz_satellite)/launch/demo.rviz"/>
+
+    <!-- Static fake TF transform -->
+    <!-- Usage: static_transform_publisher x y z qx qy qz qw frame_id child_frame_id 
+    OR 
+    Usage: static_transform_publisher x y z yaw pitch roll frame_id child_frame_id  -->
+    <!-- 输出一静态坐标变换 map为参考坐标系 base_link为机体坐标系 -->
+    <node pkg="tf2_ros" type="static_transform_publisher" name="static_tf_fake" args="100 200 5 0.3 0 0 map base_link" />
+</launch>

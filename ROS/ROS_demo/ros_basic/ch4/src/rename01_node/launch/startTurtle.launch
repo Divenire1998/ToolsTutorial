@@ -1,0 +1,7 @@
+<!-- 需要启动多个乌龟GUI节点 -->
+<launch>
+    <node pkg="turtlesim" type="turtlesim_node" name="t1" />
+    <node pkg="turtlesim" type="turtlesim_node" name="t2" />
+    <node pkg="turtlesim" type="turtlesim_node" name="t1" ns="hello"/>
+
+</launch>

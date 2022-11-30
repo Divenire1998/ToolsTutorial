@@ -1,0 +1,54 @@
+%导言区
+\documentclass[10pt]{article}
+%设置基础字体大小【10磅】
+
+\usepackage{ctex}
+%格式与内容分离的字体
+\newcommand{\myfont}{\textbf{\textsf{Fancy Text}}}
+%正文区（文稿区)
+\begin{document}
+	%字体族设置（罗马字体、无衬线字体、打字机字体）
+
+	\textrm{Roman Family} \textsf{Sans Serif Family} \texttt{Typewriter Family}
+	
+	%rmfamily表示后续字体均为“罗马”字体,直到遇到
+	\rmfamily Roman Family {\sffamily Sans Serif Family} {\ttfamily Typewriter Family}
+	
+	\sffamily The love world is big, which can hold hundreds of disappointments; the love world is small which is crowded even with three people inside.
+	
+	\ttfamily The love world is big, which can hold hundreds of disappointments; the love world is small which is crowded even with three people inside.
+	
+	%字体系列设置（粗细、宽度）
+	\textmd{Medium Series} \textbf{Boldface Series}
+	{\mdseries Medium Series} {\bfseries Boldface Series}
+	
+	%字体形状（直立、斜体、伪斜体、小型大写）
+	%字体设置命令
+	\textup{Upright Shape} \textit{Italic Shape}
+	\textsl{Slanted Shape} \textsc{Small Caps Shape}
+	
+	%字体设置声明
+	{\upshape Upright Shape} {\itshape Italic Shape} {\slshape Slanted Shape} {\scshape Small Caps Shape}
+	
+	%中文字体
+	{\songti 宋体} \quad{\heiti 黑体} \quad {\fangsong 仿宋} \quad {\kaishu 楷书}
+	中文字体的\textbf{粗体}与\textit{斜体}。
+	
+	%字体大小
+	{\tiny Hello}\\
+	{\scriptsize Hello}\\
+	{\footnotesize Hello}\\
+	{\small Hello}\\
+	{\normalsize Hello}\\
+	{\large Hello}\\
+	{\Large Hello}\\
+	{\LARGE Hello}\\
+	{\huge Hello}\\
+	{\Huge Hello}\\
+	
+	%中文字号设置命令
+	\zihao{-0} 你好
+	
+	%具体可看文档
+	\myfont
+\end{document}

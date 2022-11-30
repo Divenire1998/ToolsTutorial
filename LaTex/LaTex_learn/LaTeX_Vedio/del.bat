@@ -1,0 +1,1 @@
+del *.aux *.dvi *.log *.fdb_latexmk *.fls

@@ -1,0 +1,46 @@
+%导言区
+\documentclass{ctexbook}%ctexart,ctexbook
+%\usepackage{ctex}
+
+% ======设置标题的格式为左对齐======
+% ======具体参数见ctex文档======
+\ctexset{
+	section = {
+		format+= \zihao{-4} \heiti \raggedright,
+		name = {,、},
+		number = \chinese{section},
+		beforeskip = 1.0ex plus 0.2ex minus .2ex,
+		afterskip = 1.0ex plus 0.2ex minus .2ex,
+		aftername =\hspace{0pt}
+	},
+	subsection = {
+		format+= \zihao{5} \heiti \raggedright,
+		name = {,、},
+		number = \arabic{subsection},
+		beforeskip = 1.0ex plus 0.2ex minus .2ex,
+		afterskip = 1.0ex plus 0.2ex minus .2ex,
+		aftername = \hspace{0pt}
+	},
+}
+
+%正文区（文稿区)
+\begin{document}
+	%tableofcontents就是整个的目录
+	\tableofcontents
+	%加上chapter需要将ctexart改为ctexbook
+	\chapter{摘要}
+	我是摘要
+	\section{引言}
+	某君昆仲，今隐其名，皆余昔日在中学时良友；分隔多年，消息渐阙。日前偶闻其一大病；适归故乡，迂道往访，则仅晤一人，言病者其弟也。
+	某君昆仲，今隐其名，皆余昔日在中学时良友；分隔多年，消息渐阙。日前偶闻其一大病；适归故乡，迂道往访，则仅晤一人，言病者其弟也。
+	\section{试验方法}
+	\section{实验结果}
+	\subsection{数据}
+	\section{结果}
+	\subsection{图表}
+	\subsubsection{实验条件}
+	\subsubsection{实验过程}
+	\subsection{结果分析}
+	\section{结论}
+	\section{致谢}
+\end{document}

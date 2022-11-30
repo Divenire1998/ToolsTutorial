@@ -1,0 +1,7 @@
+<launch>
+
+    <!-- 添加要执行的节点-->
+    <node pkg="plumbing_pub_sub" type="demo01_pub" name="demo01_pub" output="screen"/>
+    <node pkg="plumbing_pub_sub" type="demo01_sub" name="demo01_sub" output="screen"/>
+
+</launch>

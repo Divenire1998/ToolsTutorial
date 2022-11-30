@@ -1,0 +1,14 @@
+<launch>
+    <!-- 需求：演示arg的使用，需要设置多个参数，这些参数使用的是同一个值 -->
+    <!-- 简单粗暴法 -->
+    <param name="A" value="0.5" />
+    <param name="B" value="0.5" />
+    <param name="C" value="0.5" />
+    <!-- arg法，将值进行封装 -->
+    <arg name="car_length" default="0.8" />
+    <param name="A" value="$(arg car_length)" />
+
+<!-- 调用命令进行传参 -->
+<!-- roslaunch launch01_basic arg.launch car_length:=999 -->
+
+</launch>

@@ -1,0 +1,45 @@
+nh_bool: true
+nh_double: 3.14
+nh_map:
+  LiJia: QiuYue
+  QiuYue: LiJia
+  Zhangxu: QiuYue
+nh_string: hello NodeHandle
+nh_vector:
+- zhangsan
+- "\u674E\u56DB"
+- "\u738B\u4E94"
+- "\u5B59\u5927\u8111\u888B"
+p_bool: true
+p_dict:
+  age: 8
+  name: hulu
+p_double: 3.14
+p_int: 100
+p_list:
+- hello
+- haha
+- xixi
+p_string: hello python
+param_bool: false
+param_double: 3.14
+param_map:
+  LiJia: QiuYue
+  QiuYue: LiJia
+  Zhangxu: QiuYue
+param_string: Hello Param
+param_vector:
+- zhangsan
+- "\u674E\u56DB"
+- "\u738B\u4E94"
+- "\u5B59\u5927\u8111\u888B"
+rosdistro: 'noetic
+
+  '
+roslaunch:
+  uris:
+    host_divenire_tm1801__36073: http://divenire-TM1801:36073/
+rosversion: '1.15.9
+
+  '
+run_id: 3bd3dc7a-b44d-11eb-be22-dff09bc8bd25

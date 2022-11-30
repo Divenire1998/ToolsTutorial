@@ -1,0 +1,34 @@
+\documentclass{ctexart}%ctexbook，ctexrep
+%\usepackage{ctex}
+
+
+
+
+%正文区(文稿区)
+%\begin{tabular}[<垂直对齐方式>]{<列格式说明>}
+%<表项>&<表项>&...&<表项>\\
+%
+% \end{tabular}
+%用\\表示换行
+%用&表示不同的列.
+% l-本列左对齐
+% c-本列居中对齐
+% r-本列右对齐
+% p{<宽>}-本列宽度固定,能够自动换行
+% \hline为加横线，列格式中加|为加竖线
+%正文区(文稿区)
+\begin{document}
+	%hline加横线，正常操作{l c c c r}
+	%利用p设置指定宽度的列格式
+	\begin{tabular}{|l|c|c|c|p{1.5cm}|}
+		\hline
+		姓名 & 语文 & 数学 & 外语 & 备注\\
+		\hline \hline \hline
+		张三 & 87 & 100 &93 & 优秀\\
+		\hline
+		李四 & 75 & 64 & 52 & 补考另行通知\\
+		\hline
+		王二 & 80 & 82 & 78 & \\
+		\hline
+	\end{tabular}
+\end{document}

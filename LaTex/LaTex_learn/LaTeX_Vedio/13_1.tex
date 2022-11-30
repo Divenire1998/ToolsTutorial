@@ -1,0 +1,33 @@
+%导言区
+\documentclass{article}
+\usepackage{ctex}
+%正文区(文稿区)
+\begin{document}
+	%一次管理，一次使用
+	%参考文献格式:
+	%\begin{thebibliography}{编号样本}
+	%\bibitem[记号]{引用标志}文献条目1 (利用bibitem排版一个参考文献条目)
+	%\bibitem[记号]{引用标志}文献条目2
+	%...
+	%\end{thebibliography}
+	%其中文献条日包括:作者，题目，出版社，年代，版本，页码等。
+	%引用时候要可以采用: \cite{引用标志1， 引用标志2，.}
+	引用一篇文章\textsuperscript{\cite{articlel}}
+	
+	引用一本书\cite{book1} 引用一本书\cite{latexGuide}等等
+	
+	\begin{thebibliography}{99}
+		\bibitem{articlel}陈立程，苏伟，蔡川，陈晓云. \emph{基于LaTex的Web数学公式提取方法研究}[J].让算机科学，2014(06)
+		%利用emph命令强调参考文献中的某些内容。
+		\bibitem{book1}William H. Press,Saul A. Teukolsky,
+		William T. Vetterling, Brian P. Flannery,
+		\emph{Numerical Recipes 3rd Edition:
+			The Art of Scientific Computing}
+		Cambridge University Press, New York , 2007.
+		\bibitem{latexGuide} Kopka Helmut, W. Daly Patrick,
+		\emph{Guide to \LaTeX}, $4^{th}$ Edition.
+		Available at \texttt{http://www. amazon. com}.
+		\bibitem{1atexMath} Graetzer George, \emph{Math Into \LaTeX},
+		BirkhAluser Boston; 3 edition (June 22， 2000).
+	\end{thebibliography}
+\end{document}

@@ -1,0 +1,81 @@
+%导言区
+\documentclass{ctexart}%ctexbook，ctexrep
+% \newcommand-定 义命令
+%命令只能由字母组成,不能以\end开头
+% \newcommand<命 令>[<参数个数>][<首参数默认值>]{<具体定义>}
+
+% \newcommand可以是简单字符串替换，例如:
+%使用\PRC 相当于People's Republic of \emph{China} 这一串内容
+\newcommand\PRC{People's Republic of \emph{China}}
+
+% \newcommand也可以使用参数
+%参数个数可以从1到9,使用时用#1,#2......#9 表示
+\newcommand\loves [2]{#1喜欢#2}
+\newcommand\hatedby[2]{#2不受#1喜欢}
+
+% \newcommand的参数也可以有默认值
+%指定参数个数的同时指定了首个参数的默认值，那么这个命令的
+%第一个参数就成为可选的参数(要使用中括号指定)
+\newcommand\love[3][喜欢]{#2#1#3}
+
+%\renewcommand -重定义命令
+%与\newcommand命令作用和用法相同，但只能用于已有命令
+% \renewcommand<命令>[<参数个数>][<首参数默认值>]{<具体定义>}
+\renewcommand\abstractname{内容简介}
+
+%定义和重定义环境
+%\newenvironment{<环境名称>}[<参数个数>][<首参数默认值>]
+% {<环境前定义>}
+% {<环境后定义>}
+%\renewenvironment{<环境名称>}[<参数个数>][<首参数默认值>]
+% {<环境前定义>}，
+% {<环境后定义>}
+
+%为book类中定义摘要(abstract) 环境
+\newenvironment{myabstract}[1][摘要]%
+{\small
+	\begin{center}\bfseries #1 \end{center}%
+	\begin{quotation}}%
+	{\end{quotation}}
+
+%环境参数只有<环境前定义>中可以使用参数,
+% <环境后定义>中不能再使用环境参数。
+%如果需要，可以先把前面得到的参数保存在一个命令中，在后面使用:
+\newenvironment{Quotation}[1]%
+{\newcommand\quotesource{#1}%
+	\begin{quotation}}%
+	{\par\hfill---《\textit{\quotesource}》%
+\end{quotation}}
+
+%正文区(文稿区)
+\begin{document}
+	\begin{myabstract}[我的摘要]
+		%此处增加默认值之后【我的摘要】会取代原参数默认值——【摘要】
+		这是一段自定义格式的摘要...
+	\end{myabstract}
+	
+	
+	\begin{abstract}
+		这是一段摘要...
+	\end{abstract}
+	
+	\begin{Quotation}{易$\cdot$乾}
+		初九，潜龙勿用。
+	\end{Quotation}
+	
+	
+	
+	\PRC
+	
+	\loves{猫儿}{鱼}
+	
+	\hatedby{猫儿}{萝卜}
+	
+	\love{猫儿}{鱼}
+	%猫儿是#2，鱼是#3，#1是默认参数喜欢
+	
+	\love[最爱]{猫儿}{鱼}
+	%方括号“最爱”是#1参数。猫儿和鱼分别是#2与#3
+\end{document}
+
+%定义命令和环境是进行\LaTeX{}格式定制、达成内容与格式分离目标的利器。使用自定义的命令和环境把字体、字号、缩进、对齐、间距等各种琐细的内容包装起来，赋以一个有意义的名字，可以使文挡结构清晰、代码整洁、易于维护。在使用宏定义的功能时，要综合利用各种已有的命令、环境、变量等功能，事实上，前面所介绍的长度变量与盒子、字体字号等内容，大多并不直接出现在文档正文中，而主要都是用在实现各种结构化的宏定义里。

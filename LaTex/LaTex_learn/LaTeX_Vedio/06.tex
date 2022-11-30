@@ -1,0 +1,85 @@
+%导言区
+\documentclass{article}
+\usepackage{ctex}%中文处理宏包
+\usepackage{xltxtra} %提供了针对XeTeX的改进并且加入了XeTeX的LOG0
+\usepackage{texnames} %一些L0GO
+\usepackage{mflogo}
+
+%正文区（文稿区)
+\begin{document}
+	
+	\section{测试文本}
+	Are you wiser than others? definitely no. in some ways, may it is true. What can you achieve? a luxurious house? a brillilant car? an admirable career? who knows ?
+	
+	近年来，随着逆向工程和三维 重建技术的发展和应用，获取现实止界中物体的三维数据的方法越来越多的关注和研究很多研究机构和商业公司都陆续推出了自己的三维重建系统
+	
+	%空行分段，多个空行等同1个
+	%自动缩进，绝对不能使用空格代替
+	%英文中多个空格处理为1个空格，中文中空格将被忽略
+	%汉字与其它字符的间距会自动由XeLaTeX处理
+	%禁止使用中文全角空格
+	%1pc=12pt=4.23mm
+	% 1em(当前字体中M的宽度)
+	\section{空白符号}
+	a\quad b
+	
+	% 2em
+	a\qquad b
+	
+	%约为1/6个em
+	a\,b a\thinspace b
+	
+	% 0.5个em
+	a\enspace b
+	
+	%空格
+	a\ b
+	
+	%_硬空格
+	a~b
+	
+	% 1pc=12pt=4. 218mm
+	a\kern 1pc b
+	
+	a\kern -1em b
+	
+	a\hskip 1em b
+	
+	a\hspace{35pt}b
+	
+	%占位宽度
+	a\hphantom{xyz}b
+	
+	%弹性长度
+	a\hfill b
+	
+	
+	\section{\LaTeX 控制符}
+	\# \$ \% \{ \} \~{} \^{} \textbackslash \&
+	\section{排版符号}
+	\S \P \dag \ddag \copyright \pounds
+	\section{\TeX 标志符号}
+	% 基本符号
+	\TeX{} \LaTeX{} \LaTeXe{}
+	
+	% xltxtra宏包提供
+	\XeLaTeX
+	
+	% texnames宏包提供
+	\AmSTeX{} \AmS-\LaTeX{}
+	\BibTeX{} \LuaTeX{ }
+	
+	% mflogo宏包提供
+	\METAFONT{} \MF{} \MP{ }
+	
+	\section{引号}
+	` ' `` '' ``你好''
+	\section{连字符}% 减号，调整长度
+	- -- ---
+	\section{非英文字符}
+	\oe \OE \ae \AE \aa \AA \o \O \l \L\ss \SS
+	!` ?`
+	\section{重音符号(以o为例)}
+	\o \'o \^o \''o \~o \=Q \.0 \u{0} \v{0} \H{0}
+	\r{o} \t{o} \b{o} \c{o} \d{o}
+\end{document}
